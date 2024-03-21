@@ -107,6 +107,14 @@
         }
         echo $jegyek;
 
+        echo "<h2>3. Feladat</h2>";
+        $fejIras = array();
+        $darabSzam = 10;
+        for ($i = 0; $i < $darabSzam; $i++) {
+            $fejIras[] = (bool)rand(0, 1);
+        }
+        $fejek = array_sum($fejIras);
+        echo "A fejek száma: " . $fejek;
     ?>
 </body>
 </html>
