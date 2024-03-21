@@ -89,29 +89,29 @@
         for ($i=0; $i < count($jegyek); $i++) { 
             switch ($jegyek[$i]) {
                 case 1:
-                    echo "$jegyek[$i] elégtelen";
+                    echo "$jegyek[$i] elégtelen<br>";
                     break;            
                 case 2:
-                    echo "$jegyek[$i] elégséges";
+                    echo "$jegyek[$i] elégséges<br>";
                     break;          
                 case 3:
-                    echo "$jegyek[$i] közepes";
+                    echo "$jegyek[$i] közepes<br>";
                     break;
                 case 4:
-                    echo "$jegyek[$i] jó";
+                    echo "$jegyek[$i] jó<br>";
                     break;
                 default:
-                    echo "$jegyek[$i] jeles";
+                    echo "$jegyek[$i] jeles<br>";
                     break;
             } 
         }
-        echo $jegyek;
 
         echo "<h2>3. Feladat</h2>";
         $fejIras = array();
         $darabSzam = 10;
         for ($i = 0; $i < $darabSzam; $i++) {
-            $fejIras[] = (bool)rand(0, 1);
+            $ertek = rand(0, 1);
+            array_push($fejIras, $ertek);
         }
         $fejek = array_sum($fejIras);
         echo "A fejek száma: " . $fejek;
